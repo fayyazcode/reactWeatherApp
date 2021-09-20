@@ -49,7 +49,52 @@ function App() {
         }
     }, [click, city, lat, long])
 
-
+    if (weather != null) {
+        return (<div className="App">
+            <div className="inputBtn">
+                <input placeholder="Enter city name" id="city" />
+                <button onClick={() => {
+                    setcity(document.getElementById('city').value);
+                    setClick(!click);
+                }}>Search</button>
+              
+            </div>
+            <div className="cityProfile">
+                <h1>{weather.name}</h1>
+                <p >{weather.weather[0].description}</p>
+                <h1 >{weather.main.temp}'C</h1>
+                <p>
+                    <span>Latitude: {weather.coord.lat}</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Longitude: {weather.coord.lon}</span>
+                </p>
+            </div>
+      <div>
+      <ul className="ul">
+                <li>Country : {weather.sys.country}</li>
+                <li>Feels Like : {weather.main.feels_like}'C</li>
+                <li>Humidity : {weather.main.humidity}g/kg</li>
+                <li>Pressure : {weather.main.pressure} Pa</li>
+                <li>Max Temperature : {weather.main.temp_max}'C</li>
+                <li>Min Temperature : {weather.main.temp_min}'C</li>
+                <li>Wind Direction : {weather.wind.deg} degree</li>
+                <li>Wind Speed : {weather.wind.speed}m/s</li>
+            </ul>
+      </div>
+        </div>)
+    }
+    else {
+        return (
+            <div className="inputBtn">
+                <input placeholder="Enter city name" id="city" />
+                <button onClick={() => {
+                    setcity(document.getElementById('city').value);
+                    setClick(!click);
+                }}>Search</button>
+               
+            </div>
+        )
+    }
 }
 
 export default App;
