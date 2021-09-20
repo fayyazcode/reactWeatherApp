@@ -41,7 +41,7 @@ input{
 }
 button{
  width: 25%;
-  color: #868686;
+  color: #868686 !important;
   min-width: 70px;
 }
 button:active{

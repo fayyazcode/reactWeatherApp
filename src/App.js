@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 import './App.css';
 
 
@@ -20,9 +21,10 @@ function App() {
                     setWeather(newWeather);
                 }).catch((err) => { console.log(err) 
                 if(err=="Error: Request failed with status code 400"){
-                    alert("Please fill input and Search again !")
+                    swal("Moron","Please fill input and Search again !","warning")
                 }else{
-                    alert("City not found !")
+                   
+                    swal("Stupid", "City not found !", "warning");
                 }
                 }
                 )
