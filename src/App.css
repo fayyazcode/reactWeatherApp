@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+  min-width: 370px ;
+  display: flex;
+  flex-direction: column;
+}
+*{
+  box-sizing: border-box;
+}
+.foot{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.inputBtn{
+  height: 60px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+input,button{
+ padding: 20px ;
+  font-size: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, rgb(255, 227, 226));
+  box-shadow:  25px 25px 72px #c0c0c0,
+               -35px -35px 72px #f7f2f2;
+               outline: none;
+               border: none;
+}
+input{
+  width: 70%;
+  text-indent: 10px;
+  margin-right: 5px;
+}
+button{
+ width: 25%;
+  color: #868686;
+  min-width: 70px;
+}
+button:active{
+  color: #000000; 
+  border-radius: 8px;
+background: #fff3f3;
+box-shadow: inset 35px 35px 22px #fbf0f0,
+            inset -35px -35px 82px #f8dada;
+}
+.ul{
+display: flex;
+flex-direction: column;
+min-width:360px ;
+max-width: 600px;
+margin: 0 auto;
+
+}
+.ul >li{
+  padding: 10px 0;
+  margin: 10px 0;
+  background-color: #f8dada;
+}
